@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Kitoblar sayti | Ro'yxatdan o'tish</title>{% endblock title %}
+
+
+{% block content %}
+<div id = 'container'>
+    <div class = 'header'>
+      <h2>Hisob ochish</h2>
+    </div>
+    <form action = '#' method = 'POST'>
+      {% csrf_token %}
+      <div id = 'form-control'>
+          <label>Foydalanuvchi nomi:</label>
+          {{register_form.username}}
+        </div>
+        <div id = 'form-control'>
+          <label>Elektron pochta:</label>
+          {{register_form.email}}
+        </div>
+  
+      <div id = 'form-control'>
+          <label>Parol:</label>
+          {{register_form.password1}}
+        </div>
+  
+       <div id = 'form-control'>
+          <label>Parolni tasdiqlang:</label>
+            {{register_form.password2}}
+        </div>
+        {{register_form.errors}}
+       <div id = 'haveAnAccount'>
+           <span>Hisobingiz bormi?</span>
+           <a href = "{% url 'login' %}"><strong>Kirish</strong></a>
+       </div>
+      <button type = 'submit' id = 'submitButton'>Ro'yxatdan o'tish</button>
+    </form>
+  </div>
+  {% endblock %}
