@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <div id = 'logo' style="width:25%">
-        <img src = "{% static 'img/pdf 3.png' %}" style="width:10%">
+        <img src = "{% static 'img/pdf 3.png' %}" style="width:60px">
       </div>
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,8 @@
         {% if user.is_authenticated %}
          <div class="dropdown">
           <p class="dropdown-toggle ml-5 mt-3 float-right" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Xush kelibsiz {{user.username}}
+            <img src="https://img.icons8.com/ios/50/000000/handshake--v2.png" style="width: 20%"/>
+              Xush kelibsiz {{user.username}}
           </p>
           <ul class="dropdown-menu ml-5" style="width:180px" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="#">Kitobni yuklang</a></li>
